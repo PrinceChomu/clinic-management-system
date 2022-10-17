@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('date');
             $table->time('time');
             $table->string('doctor');
-            $table->string('status', enum('active', 'inactive'));
+            $table->enum('status', ['active', 'inactive']);
             $table->text('reason');
             $table->softDeletes();
             $table->timestamps();
