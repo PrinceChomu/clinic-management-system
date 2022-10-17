@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('doctor');
             $table->string('status', enum('active', 'inactive'));
             $table->text('reason');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
