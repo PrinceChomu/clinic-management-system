@@ -1,0 +1,16 @@
+/**
+* Reports page css
+* custom
+*
+*/
+
+.inner_elements{
+    display: flex;
+    flex-direction: column;
+}
+
+.panel_element{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
