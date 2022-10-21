@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
 use Illuminate\Http\Request;
 
-class Department extends Controller
+class AppointmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,11 @@ class Department extends Controller
      */
     public function index()
     {
-        //
+        $appointments = Appointment::all();
+
+        return view('appointment.index')->with([
+            'appointments' => $appointments,
+        ]);
     }
 
     /**

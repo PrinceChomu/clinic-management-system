@@ -10,4 +10,12 @@ class Appointment extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    public function patient(){
+        return $this->hasMany(User::class, 'id', 'patient_id');
+    }
+
+    public function department(){
+        return $this->hasMany(Department::class, 'id', 'department_id');
+    }
 }
